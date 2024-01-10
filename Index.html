@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 100;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.reservation-form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #ccc;
+        }
+        .reservation-form input[type="text"], .reservation-form input[type="email"], .reservation-form input[type="date"], .reservation-form input[type="time"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .reservation-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .reservation-form input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 2500px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+  </style>
+  <title>Restaurant</title>
+</head>
+<body>
+  <header class="bg-info bg-gradient">
+    <br>
+    <h1 style="color:rgb(36, 1, 1);font-size:300%;">Meat's Paradise</h1>
+  </header>
+  <section data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-us">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#table-reserve">Table Reservation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#best-selling">Best Selling</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-details">Contact</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div id="home" style=" background-image: url('R2.png');padding:250px 350px;">
+        <h1 class="text-align-center" style="color:forestgreen;font-size:500%;"><b>Welcome to our restaurant website...</b></h1>
+      </div>
+      <br>
+      <article id="about-us" class="container-fluid" style="padding:150px 50px;">
+        <h1 style="color:rgb(106, 77, 174);font-size:400%;">Meat's Paradise</h1><br>
+        <p>We started our journey from Chennai in 2017 and now we have grown our presence to four restaurants across four cities i.e Chennai, Bangalore, Coimbatore and Nilgiri. Location was the key in making our decisions and they definitely paid off. Each location is a landmark destination in itself, thereby providing the much-needed impetus in terms of customer visibility.</p>
+        <p>Our restaurant is based on a very simple mantra; “Most delicious Indian recipes that reflect the real taste and soul of Indian Food which is served in a cheerful restaurant where food lovers can relax and eat with their fingers if they wish.” At Meat's Paradise we experiment with the finest Indian spices and ingredients along with diverse cooking techniques to recreate traditional recipes, providing each diner with an aromatic. visual and flavorful dining experience.</p>
+        <p>Our menu spans the breadth and depth of India, delivering the most delicious recipes that reflect the real taste and soul of Indian food. Our signature dishes like Chicken Biriyani, Mutton Biriyani, Chicken 65, Mutton chukka and Fish fry from our sharing plates and combos to the grills.</p>
+        <p>Our curries are light and flavourful dishes like Mutton Curry, Prawn Curry, Andhra Chilli Chicken and Butter Chicken.</p>
+        <p>Our desserts are unique and innovative; rather than having the regular milk-based Indian desserts, we have created memorable desserts like Filter Coffee, Saffroni Kulfi, and Ras Malai.</p>
+        <p>We believe it’s not one man responsible for the success of the restaurant, it’s the whole team. We are a people company and the three most important core values we follow at Meat's Paradise are Our People, Our Product, and Our Guest.</p>
+       </article>
+      <br>
+      <article id="table-reserve" class="container-fluid" style="padding:150px 50px;">
+        <h1>Table Reservation</h1>
+        <form class="reservation-form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required>
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" required>
+
+          <label for="location">Select your location</label>
+                     <select class="form-control col-xs-8 col-md-8" placeholder="Location">
+                        <option>Chennai</option>
+                        <option>Bangalore</option>
+                        <option>Coimbatore</option>
+                        <option>Nilgiri</option>
+                     </select>
+          <input type="submit" value="Reserve">
+        </form>
+      </article>
+      <br>
+      <article id="best-selling" class="container-fluid" style="padding:150px 50px;">
+        <h1>Popular Items</h1>
+        <img src="https://wp.scoopwhoop.com/wp-content/uploads/2015/04/5677346e6e510a6f3a75b477_5.jpg?resize=2048,1365" alt="Chicken 65" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Chicken 65</h2>
+        <img src="https://wp.scoopwhoop.com/wp-content/uploads/2015/04/5677346e6e510a6f3a75b477_l7.jpg" alt="Andhra Chilli Chicken" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Andhra Chilli Chicken</h2>
+        <img src="https://wp.scoopwhoop.com/wp-content/uploads/2015/04/5677346e6e510a6f3a75b477_13.jpg" alt="Mutton Curry" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Mutton Curry</h2>
+        <img src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_1290/https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-12-1290x1934.jpg" alt="Chicken Biriyani" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Chicken Biriyani</h2>
+        <img src="https://www.licious.in/blog/wp-content/uploads/2019/11/Mutton-Biryani-1-e1574922017237.jpg" alt="Mutton Biriyani" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Mutton Biriyani</h2>
+        <img src="https://healthyliving.natureloc.com/wp-content/uploads/2015/10/Kerala-Fish-Fry.jpg" alt="Fish fry" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Fish fry</h2>
+        <img src="https://www.whiskaffair.com/wp-content/uploads/2020/04/Kerala-Prawn-Curry-3.jpg" alt="Prawn Curry" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Prawn Curry</h2>
+        <img src="https://www.faskitchen.com/wp-content/uploads/2015/07/chettinad-egg-masala.jpg" alt="Egg Masala" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Egg Masala</h2>
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/06/Best-Instant-Pot-Butter-Chicken-Recipe.jpg" alt="Butter Chicken" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Butter Chicken</h2>
+        <img src="https://www.lekhafoods.com/media/1051277/virudhunagar-mutton-sukka.jpg" alt="Mutton chukka" width="250px" height="250px">
+        <h2 class="h5 font-weight-bold mb-2 font-italic">Mutton chukka</h2>
+      </article>
+      <br>
+      <article id="contact-details" class="container-fluid" style="padding:150px 50px;">
+        <div class="row  border-dark"  >
+          <div class="col-md-6">
+          <div class="p-3 mb-2 bg-white text-dark">
+              <h3 class="p-3 mb-2 bg-dark text-white">Enter Your Details</h3>
+              <label class="font-weight-bold">Email Address</label>
+              <input type="text" class="form-control col-xs-8 col-md-8" placeholder="Email Address" >
+              <label class="font-weight-bold">Mobile Number</label>
+              <input type="text" class="form-control col-xs-8 col-md-8" placeholder="Mobile Number" >
+              <label class="font-weight-bold">Query</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+          </div>
+          <div class="col-md-6 ">
+      <h3 class="font-weight-light p-3 mb-2 bg-success text-white" >Our Contact Details</h3>
+      <h5 class="font-weight-light p-3 mb-2 bg-dark text-white">Email Address</h5>
+      <h5 class="font-weight-light p-3 mb-2 bg-white text-dark">meatparadise2017@gmail.com  </h5>
+      <br>
+      <h5 class="font-weight-light p-3 mb-2 bg-dark text-white">Address</h5>
+      <h5 class="font-weight-light p-3 mb-2 bg-white text-dark">  sec 5, Main Road, Near Main Highway, Chennai  </h5>
+      <br>
+      <h5 class="font-weight-light p-3 mb-2 bg-dark text-white">Contact Number</h5>
+      <h5 class="font-weight-light p-3 mb-2 bg-white text-dark">   140222555777  </h5>
+          </div>
+      
+      
+      
+      <div class= "list-group">
+          <h3 class="p-3 mb-2 bg-primary text-align-center text-white">Connect with us</h3>
+          <a href= "google.com" class= "list-group-item"> Google link </a>
+          <a href= "facebook.com" class= "list-group-item"> Facebook Link </a>
+          <a href= "youtube.com" class= "list-group-item"> Youtube Link </a>
+          </div>
+          </div>
+      </article>
+      </section>
+
+
+</body>
+</html>
